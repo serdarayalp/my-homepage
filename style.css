@@ -43,5 +43,28 @@ footer {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     background-color: #f8f9fa;
-    cursor: pointer;<
+    cursor: pointer;
+}
+
+.about-image {
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: auto;
+}
+
+.social-link {
+    font-size: 1.5rem;
+    color: #333;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #0d6efd;
+}
+
+.hero-mini {
+    background-color: #f8f9fa;
+    padding: 60px 0;
 }
