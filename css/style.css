@@ -70,7 +70,7 @@ footer {
 }
 
 .blog-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1501139083538-0139583c060f?auto=format&fit=crop&w=1200&q=80');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/blog-java-datetime.jpg');
     background-size: cover;
     background-position: center;
     color: white;
