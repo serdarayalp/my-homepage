@@ -68,3 +68,44 @@ footer {
     background-color: #f8f9fa;
     padding: 60px 0;
 }
+
+.blog-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1501139083538-0139583c060f?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+}
+
+pre {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #0d6efd;
+    overflow-x: auto;
+}
+
+.sidebar-card {
+    border: none;
+    background-color: #f8f9fa;
+}
+
+.badge-java {
+    background-color: #e76f51;
+}
+
+
+.feature-box {
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.feature-box:hover {
+    background-color: #f8f9fa; /* Ganz dezenter Grauton beim Hover */
+    transform: translateY(-5px); /* Leichter Schwebe-Effekt */
+}
+
+/* Verhindert, dass der Link blau unterstrichen wird */
+.stretched-link::after {
+    z-index: 1;
+}
