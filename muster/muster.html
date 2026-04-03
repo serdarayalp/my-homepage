@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine private Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+        }
+        @media (max-width: 768px) {
+            .carousel-item img {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mein Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">Über mich</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Galerie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Natur 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Willkommen auf meiner Seite</h5>
+                    <p>Schön, dass du hier bist.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Natur 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Meine Projekte</h5>
+                    <p>Hier zeige ich, was ich so mache.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Natur 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Kontakt aufnehmen</h5>
+                    <p>Schreib mir gerne eine Nachricht.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <div class="container my-5">
+        <section id="about" class="mb-5 text-center">
+            <h2>Über mich</h2>
+            <p class="lead">Dies ist ein Beispiel für ein responsives Layout mit Bootstrap.</p>
+        </section>
+
+        <section id="gallery" class="row">
+<div class="container my-5">
+    <section id="about" class="mb-5 text-center">
+        <h2 class="display-5 fw-bold">Meine Highlights</h2>
+        <p class="lead text-muted">Hier findest du eine Übersicht meiner neuesten Projekte und Aktivitäten.</p>
+        <hr class="w-25 mx-auto">
+    </section>
+
+    <section id="gallery" class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="https://picsum.photos/id/1/400/250" class="card-img-top" alt="Projekt 1">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Webentwicklung</h5>
+                    <p class="card-text">Erste Schritte mit HTML, CSS und Bootstrap für responsive Layouts.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Mehr erfahren</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="https://picsum.photos/id/10/400/250" class="card-img-top" alt="Projekt 2">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Fotografie</h5>
+                    <p class="card-text">Naturaufnahmen und Porträts, die mit meiner neuen Kamera entstanden sind.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Bilder ansehen</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="https://picsum.photos/id/20/400/250" class="card-img-top" alt="Projekt 3">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Reiseblog</h5>
+                    <p class="card-text">Ein kleiner Einblick in meine letzte Wanderung durch die Alpen.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Bericht lesen</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="https://picsum.photos/id/26/400/250" class="card-img-top" alt="Projekt 4">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Gadgets</h5>
+                    <p class="card-text">Meine liebsten Tech-Tools, die meinen Alltag im Home-Office erleichtern.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Tools zeigen</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="https://picsum.photos/id/36/400/250" class="card-img-top" alt="Projekt 5">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Design-Inspiration</h5>
+                    <p class="card-text">Farben, Schriften und Konzepte, die mich aktuell beim Gestalten bewegen.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Inspiration</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="https://picsum.photos/id/48/400/250" class="card-img-top" alt="Projekt 6">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Kontakt</h5>
+                    <p class="card-text">Hast du Fragen oder Anregungen? Melde dich gerne direkt bei mir.</p>
+                    <a href="#contact" class="btn btn-primary btn-sm">Schreib mir</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+        </section>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p>&copy; 2024 Meine Website | Erstellt mit Bootstrap</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

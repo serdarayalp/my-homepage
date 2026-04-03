@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java 8 Stream API | DEVCRAFT Blog</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="../../index.html">DEVCRAFT</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../about-me.html">Über mich</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="blog-header text-center">
+    <div class="container">
+        <span class="badge badge-java mb-3 p-2">Java Entwicklung</span>
+        <h1 class="display-3 fw-bold">Die Java 8 Stream API</h1>
+        <p class="lead">Deklarative Datenverarbeitung statt komplexer Schleifen-Logik.</p>
+        <div class="mt-3">
+            <small><i class="bi bi-calendar3"></i> 3. April 2026 | <i class="bi bi-person"></i> Von DEVCRAFT</small>
+        </div>
+    </div>
+</header>
+
+<main class="container my-5">
+    <div class="row">
+        <div class="col-lg-8">
+            <article>
+                <h2 class="mb-4">Effiziente Datenverarbeitung mit Streams</h2>
+                <p>Die mit Java 8 eingeführte <strong>Stream API</strong> hat die Art und Weise, wie wir mit Collections arbeiten, revolutioniert. Anstatt Collections imperativ mit <code>for-each</code>-Schleifen zu durchlaufen, beschreiben wir nun funktional, <em>was</em> mit den Daten geschehen soll – nicht <em>wie</em>.</p>
+
+                <h3 class="mt-5">1. Was ist ein Stream?</h3>
+                <p>Ein Stream ist keine Datenstruktur, die Daten speichert, sondern ein Datenstrom, der Elemente aus einer Quelle (wie einer Liste) durch eine Pipeline von Operationen transportiert.</p>
+
+                <pre><code>List&lt;String&gt; namen = Arrays.asList("Alice", "Bob", "Charlie", "Anna");
+
+// Klassischer Filter-Vorgang
+long anzahlA = namen.stream()
+    .filter(n -> n.startsWith("A"))
+    .count();
+
+System.out.println("Namen mit A: " + anzahlA);</code></pre>
+
+                <h3 class="mt-5">2. Intermediate vs. Terminal Operations</h3>
+                <p>Das Konzept basiert auf zwei Arten von Operationen:</p>
+                <ul>
+                    <li><strong>Intermediate:</strong> Diese Operationen (z.B. <code>filter</code>, <code>map</code>, <code>sorted</code>) geben einen neuen Stream zurück und sind <em>lazy</em> – sie werden erst ausgeführt, wenn eine Terminal-Operation aufgerufen wird.</li>
+                    <li><strong>Terminal:</strong> Diese schießen den Stream ab und liefern ein Ergebnis oder einen Seiteneffekt (z.B. <code>collect</code>, <code>forEach</code>, <code>reduce</code>).</li>
+                </ul>
+
+                <h3 class="mt-5">3. Daten transformieren mit map()</h3>
+                <p>Mit der <code>map</code>-Methode lassen sich Elemente eines Streams in einen anderen Typ oder Wert umwandeln.</p>
+
+                <pre><code>List&lt;Integer&gt; namenLängen = namen.stream()
+    .map(String::length)
+    .collect(Collectors.toList());</code></pre>
+
+                <blockquote class="blockquote my-4 p-4 bg-light border-start border-primary border-4">
+                    <p>"Streams machen Code nicht nur kürzer, sondern durch die deklarative Ausdrucksweise auch deutlich wartbarer und weniger fehleranfällig."</p>
+                </blockquote>
+            </article>
+
+            <div class="mt-5">
+                <a href="../../java.html" class="btn btn-secondary"><i class="bi bi-arrow-left"></i> Zurück</a>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card sidebar-card p-3 mb-4 shadow-sm">
+                <h5 class="fw-bold">Über dieses Thema</h5>
+                <p class="small text-muted">Die Stream API wurde entwickelt, um die Vorteile von Multi-Core-Prozessoren durch einfache Parallelisierung (`parallelStream`) besser auszunutzen.</p>
+                <hr>
+                <h6>Key Takeaways:</h6>
+                <ul class="small">
+                    <li>Keine Speicherung von Daten (Streams sind transient)</li>
+                    <li>Funktionaler Programmierstil</li>
+                    <li>Lazy Evaluation für bessere Performance</li>
+                    <li>Einfache Parallelverarbeitung möglich</li>
+                </ul>
+            </div>
+
+            <div class="card sidebar-card p-3 shadow-sm text-center">
+                <h5 class="fw-bold">Interesse an Java?</h5>
+                <p class="small">Ich unterstütze gerne bei Projekten oder Code-Reviews im Java-Umfeld.</p>
+                <a href="mailto:serdarayalp@outlook.com" class="btn btn-primary btn-sm">Schreib mir</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark text-white text-center py-4">
+    <p class="mb-0">&copy; 2026 DEVCRAFT Blog</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

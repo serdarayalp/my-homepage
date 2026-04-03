@@ -70,7 +70,7 @@ footer {
 }
 
 .blog-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/blog-java-datetime.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/blog-java.png');
     background-size: cover;
     background-position: center;
     color: white;
@@ -108,4 +108,8 @@ pre {
 /* Verhindert, dass der Link blau unterstrichen wird */
 .stretched-link::after {
     z-index: 1;
+}
+
+.inactive {
+    background-color: #eee !important;
 }
