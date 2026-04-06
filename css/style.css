@@ -76,7 +76,7 @@ footer {
 .social-link {
     font-size: 1.5rem;
     color: #333;
-    margin-right: 15px;
+    margin-right: 5px;
     transition: color 0.3s;
 }
 
@@ -132,4 +132,51 @@ pre {
 
 .inactive {
     background-color: #eee !important;
+}
+
+
+
+.business-card {
+    width: 100%;
+    max-width: 400px; /* Begrenzt die Breite auf Desktop */
+    aspect-ratio: 1.6 / 1; /* Hält das Visitenkarten-Verhältnis */
+    background: linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 100%);
+    color: #ffffff;
+    font-family: 'Inter', -apple-system, sans-serif;
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    margin: 20px auto;
+}
+
+/*
+.business-card:hover {
+    transform: translateY(-5px);
+}
+*/
+
+.business-card-header h1 {
+    margin: 0;
+    font-size: clamp(1.2rem, 5vw, 1.6rem); /* Schriftgröße passt sich an */
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.business-card-header p {
+    margin: 0.5rem 0;
+    color: #00d4ff;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.contact-info {
+    font-size: clamp(0.7rem, 3vw, 0.85rem);
+    color: #b0b0b0;
+    line-height: 1.8;
 }
